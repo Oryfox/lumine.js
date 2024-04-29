@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumine</title>
+</head>
+<body>
+  
+</body>
+<script>
+  // Spotify Token
+  const token = window.location.hash.split('=')[1].split('&')[0];
+  fetch('/token', {method: 'POST', body: token}).then(() => {
+    window.close();
+  })
+</script>
+</html>
